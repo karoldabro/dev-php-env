@@ -15,7 +15,7 @@ Simple environment for php framework/cms development based on docker and git sub
 | db | Contains maria db. [ Credentials ](###db) | 3306 |
 | phpmyadmin| Contains phpmyadmin that operates on db container data. [ Credentials ](###phpmyadmin) | 9002
 
-### db
+### Container: db
 | key | value |
 | --- | ----- |
 | host | db |
@@ -23,7 +23,7 @@ Simple environment for php framework/cms development based on docker and git sub
 | password | root |
 | default db name | workspace |
 
-### phpmyadmin
+### Container: phpmyadmin
 | key | value |
 | --- | ----- |
 | user name | root |
