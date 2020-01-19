@@ -4,7 +4,6 @@ Simple environment for php framework/cms development based on docker and git sub
 ## Features
 - Docker webdevops environment with php7.3.
 - Example VS Code settings for xdebug.
-- Example PHP project configuration.
 - Copy ssh form given directory to make possible to use git inside the container.
 - Make file to manage creation.
 - Database container.
@@ -12,7 +11,7 @@ Simple environment for php framework/cms development based on docker and git sub
 ## Containers
 | name | features | ports |
 | ---- | -------- | ----- |
-| server | Contains apache, php, xdebug, node, and zsh shell. Optionally your ssh keys can be copied into it so you can use git inside this container. | apache: 9001 <br/> php: 9000 |
+| server | Contains apache, php, xdebug and zsh shell. Optionally your ssh keys can be copied into it so you can use git inside this container. | apache: 9001 <br/> php: 9000 |
 | db | Contains maria db. [ Credentials ](###Container:\ db) | 3306 |
 | phpmyadmin| Contains phpmyadmin that operates on db container data. [ Credentials ](###Container:\ phpmyadmin) | 9002
 
