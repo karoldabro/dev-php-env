@@ -69,7 +69,7 @@ docker-compose -f .docker/docker-compose.yml up -d
 make down
 
 # By alternative command:
-docker-compose down
+docker-compose -f .docker/docker-compose.yml down
 ```
 #### Exec server container shell by:
 ```bash
