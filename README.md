@@ -13,7 +13,7 @@ Simple environment for php framework/cms development based on docker and git sub
 | ---- | -------- | ----- |
 | server | Contains apache, php, xdebug and zsh shell. Optionally your ssh keys can be copied into it so you can use git inside this container. | apache: 9001 <br/> php: 9000 |
 | db | Contains maria db. [ Credentials ](###db) | 3306 |
-| phpmyadmin| Contains phpmyadmin that operates on db container data. [ Credentials ](###Container:\ phpmyadmin) | 9002
+| phpmyadmin| Contains phpmyadmin that operates on db container data. [ Credentials ](###phpmyadmin) | 9002
 
 ### db
 | key | value |
@@ -23,7 +23,7 @@ Simple environment for php framework/cms development based on docker and git sub
 | password | root |
 | default db name | workspace |
 
-### Container: phpmyadmin
+### phpmyadmin
 | key | value |
 | --- | ----- |
 | user name | root |
