@@ -1,5 +1,6 @@
 # dev-php-env
-Simple environment for php framework/cms development based on docker and git submodules
+Simple environment for php framework/cms development based on docker and git submodules.
+Can be used in laravel/lumen project.
 
 ## Features
 - Docker webdevops environment with php7.3.
