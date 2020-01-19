@@ -1,0 +1,41 @@
+{
+    "phpunit.command": "docker-compose -f .docker/docker-compose.yml run --rm server",
+    "phpunit.phpunit": "/app/vendor/bin/phpunit",
+    "phpunit.paths": {
+        "${workspaceFolder}": "/app"
+    },
+    "phpunit.args": [
+        "--configuration",
+        "/app/phpunit.xml"
+    ],
+    "php.validate.enable": false,
+    "php.suggest.basic": false,
+    "editor.quickSuggestions": {
+        "comments": true
+    },
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/CVS/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/storage",
+        "**/storage/**",
+        "_ide_helper.php",
+        "_ide_helper_models"
+    ],
+    "intelephense.telemetry.enabled": false,
+    "intelephense.format.enable": true,
+    "intelephense.completion.triggerParameterHints": true,
+    "intelephense.completion.insertUseDeclaration": true,
+    "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
+    "intelephense.trace.server": "messages",
+    "php-docblocker.returnGap": true,
+    "php-docblocker.qualifyClassNames": true,
+    "php-docblocker.author": {
+        "name": "${env:GIT_NAME}", 
+        "email": "${env:GIT_EMAIL}"
+    }
+}

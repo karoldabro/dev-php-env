@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=workspace
+    volumes: 
+      - ./services/db/data:/var/lib/mysql
+
+  server:
+    build: ./services/server
+    volumes: 
+      - ../:/app/
+      - ./services/server/php.ini:/opt/docker/etc/php/php.ini
+      - ${SSH_PATH}:/root/.ssh/
+    ports:
+      - 9001:80
+    expose:
+      - "9000"
+    environment:
+      - PHP_DISPLAY_ERRORS=1
+      - PHP_DEBUGGER=xdebug
+      - WEB_DOCUMENT_ROOT=/app/public
+      
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+     - "9002:80"
+    environment:
+      - PMA_ARBITRARY=1
+      - MYSQL_ROOT_PASSWORD=root
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+      - PMA_PORT=3306
+      - PMA_HOST=db
+    volumes:
+     - /services/phpmyadmin/sessions
+      
