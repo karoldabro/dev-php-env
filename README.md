@@ -39,7 +39,11 @@ cd your/project/dir/name
 ```
 3. Clone this repo: 
 ```bash
-git submodule add git@github.com:karoldabro/library-dev-php.git .docker
+# If your project use git:
+git submodule add git@github.com:karoldabro/dev-php-env.git .docker
+
+# If your project do not use git:
+git clone git@github.com:karoldabro/dev-php-env.git .docker
 ```
 4. Copy .env file into your project catalog.
 ```bash
@@ -56,20 +60,41 @@ In below examples there are always two commands, first using Makefile, second is
 ```bash
 # By Makefile command:
 make
+
 # By alternative command:
-docker compose up -d
+docker-compose -f .docker/docker-compose.yml up -d
 ```
 #### Down docker-compose network by:
 ```bash
 # By Makefile command:
 make down
+
 # By alternative command:
-docker compose down
+docker-compose down
 ```
-#### Exec container shell by:
+#### Exec server container shell by:
 ```bash
 # By Makefile command:
 make server
+
 # By alternative command:
 docker exec -it docker_server_1 /bin/zsh
+```
+
+#### Exec db container shell by:
+```bash
+# By Makefile command:
+make db
+
+# By alternative command:
+docker exec -it docker_db_1 /bin/bash
+```
+
+#### Exec phpmyadmin container shell by:
+```bash
+# By Makefile command:
+make pma
+
+# By alternative command:
+docker exec -it docker_phpmyadmin_1 /bin/bash
 ```
