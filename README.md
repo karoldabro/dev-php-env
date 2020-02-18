@@ -40,10 +40,10 @@ cd your/project/dir/name
 3. Clone this repo: 
 ```bash
 # If your project use git:
-git submodule add git@github.com:karoldabro/dev-php-env.git .docker
+git submodule add https://github.com/karoldabro/dev-php-env.git .docker
 
 # If your project do not use git:
-git clone git@github.com:karoldabro/dev-php-env.git .docker
+git clone https://github.com/karoldabro/dev-php-env.git .docker
 ```
 4. Copy .env file into your project catalog.
 ```bash
