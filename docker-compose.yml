@@ -28,7 +28,6 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     volumes:
-     - ./services/phpmyadmin/sessions
      - ./services/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
     ports:
      - ${SERVICE_PHPMYADMIN_PORT}:80
